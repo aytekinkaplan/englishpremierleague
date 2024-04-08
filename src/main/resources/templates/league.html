@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier League Table</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1jOUuKTFv4lwQKgdpLpPDwbY7eOJz4W4jDTAcsjYz8L5j1JvxyvbtQ" crossorigin="anonymous">
+    <style>
+        /* Stil dosyası içeriği */
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #212529;
+            border-collapse: collapse;
+        }
+
+        .table th,
+        .table td {
+            padding: 0.75rem;
+            vertical-align: top;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .table thead th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .table tbody + tbody {
+            border-top: 2px solid #dee2e6;
+        }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: rgba(0, 0, 0, 0.075);
+        }
+
+        .table-bordered {
+            border: 1px solid #dee2e6;
+        }
+
+        .table-bordered th,
+        .table-bordered td {
+            border: 1px solid #dee2e6;
+        }
+
+        .table-bordered thead th,
+        .table-bordered thead td {
+            border-bottom-width: 2px;
+        }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: rgba(0, 0, 0, 0.075);
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center">Premier League Table - 2023/24</h1>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th>RANK</th>
+                <th>TEAM</th>
+                <th>MATCHES PLAYED</th>
+                <th>WINS</th>
+                <th>DRAWS</th>
+                <th>LOSSES</th>
+                <th>GOALS FOR</th>
+                <th>GOALS AGAINST</th>
+                <th>GOAL DIFFERENCE</th>
+                <th>POINTS</th>
+            </tr>
+            <tr th:object="${team1}">
+                <th th:text="*{rank}"></th>
+                <th th:text="*{teamName}"></th>
+                <th th:text="*{matchesPlayed}"></th>
+                <th th:text="*{wins}"></th>
+                <th th:text="*{draws}"></th>
+                <th th:text="*{losses}"></th>
+                <th th:text="*{goalsFor}"></th>
+                <th th:text="*{goalsAgainst}"></th>
+                <th th:text="*{goalDifference}"></th>
+                <th th:text="*{points}"></th>
+            </tr>
+            <tr th:object="${team2}">
+                <th th:text="*{rank}"></th>
+                <th th:text="*{teamName}"></th>
+                <th th:text="*{matchesPlayed}"></th>
+                <th th:text="*{wins}"></th>
+                <th th:text="*{draws}"></th>
+                <th th:text="*{losses}"></th>
+                <th th:text="*{goalsFor}"></th>
+                <th th:text="*{goalsAgainst}"></th>
+                <th th:text="*{goalDifference}"></th>
+                <th th:text="*{points}"></th>
+            </tr>
+            <tr th:object="${team3}">
+                <th th:text="*{rank}"></th>
+                <th th:text="*{teamName}"></th>
+                <th th:text="*{matchesPlayed}"></th>
+                <th th:text="*{wins}"></th>
+                <th th:text="*{draws}"></th>
+                <th th:text="*{losses}"></th>
+                <th th:text="*{goalsFor}"></th>
+                <th th:text="*{goalsAgainst}"></th>
+                <th th:text="*{goalDifference}"></th>
+                <th th:text="*{points}"></th>
+            </tr>
+            <tr th:object="${team4}">
+                <th th:text="*{rank}"></th>
+                <th th:text="*{teamName}"></th>
+                <th th:text="*{matchesPlayed}"></th>
+                <th th:text="*{wins}"></th>
+                <th th:text="*{draws}"></th>
+                <th th:text="*{losses}"></th>
+                <th th:text="*{goalsFor}"></th>
+                <th th:text="*{goalsAgainst}"></th>
+                <th th:text="*{goalDifference}"></th>
+                <th th:text="*{points}"></th>
+            </tr>
+            <tr th:object="${team5}">
+                <th th:text="*{rank}"></th>
+                <th th:text="*{teamName}"></th>
+                <th th:text="*{matchesPlayed}"></th>
+                <th th:text="*{wins}"></th>
+                <th th:text="*{draws}"></th>
+                <th th:text="*{losses}"></th>
+                <th th:text="*{goalsFor}"></th>
+                <th th:text="*{goalsAgainst}"></th>
+                <th th:text="*{goalDifference}"></th>
+                <th th:text="*{points}"></th>
+            </tr>
+            <tr th:object="${team6}">
+                <th th:text="*{rank}"></th>
+                <th th:text="*{teamName}"></th>
+                <th th:text="*{matchesPlayed}"></th>
+                <th th:text="*{wins}"></th>
+                <th th:text="*{draws}"></th>
+                <th th:text="*{losses}"></th>
+                <th th:text="*{goalsFor}"></th>
+                <th th:text="*{goalsAgainst}"></th>
+                <th th:text="*{goalDifference}"></th>
+                <th th:text="*{points}"></th>
+            </tr>
+            <tr th:object="${team7}">
+                <th th:text="*{rank}"></th>
+                <th th:text="*{teamName}"></th>
+                <th th:text="*{matchesPlayed}"></th>
+                <th th:text="*{wins}"></th>
+                <th th:text="*{draws}"></th>
+                <th th:text="*{losses}"></th>
+                <th th:text="*{goalsFor}"></th>
+                <th th:text="*{goalsAgainst}"></th>
+                <th th:text="*{goalDifference}"></th>
+                <th th:text="*{points}"></th>
+            </tr>
+            <tr th:object="${team8}">
+                <th th:text="*{rank}"></th>
+                <th th:text="*{teamName}"></th>
+                <th th:text="*{matchesPlayed}"></th>
+                <th th:text="*{wins}"></th>
+                <th th:text="*{draws}"></th>
+                <th th:text="*{losses}"></th>
+                <th th:text="*{goalsFor}"></th>
+                <th th:text="*{goalsAgainst}"></th>
+                <th th:text="*{goalDifference}"></th>
+                <th th:text="*{points}"></th>
+            </tr>
+            <tr th:object="${team9}">
+                <th th:text="*{rank}"></th>
+                <th th:text="*{teamName}"></th>
+                <th th:text="*{matchesPlayed}"></th>
+                <th th:text="*{wins}"></th>
+                <th th:text="*{draws}"></th>
+                <th th:text="*{losses}"></th>
+                <th th:text="*{goalsFor}"></th>
+                <th th:text="*{goalsAgainst}"></th>
+                <th th:text="*{goalDifference}"></th>
+                <th th:text="*{points}"></th>
+            </tr>
+            <tr th:object="${team10}">
+                <th th:text="*{rank}"></th>
+                <th th:text="*{teamName}"></th>
+                <th th:text="*{matchesPlayed}"></th>
+                <th th:text="*{wins}"></th>
+                <th th:text="*{draws}"></th>
+                <th th:text="*{losses}"></th>
+                <th th:text="*{goalsFor}"></th>
+                <th th:text="*{goalsAgainst}"></th>
+                <th th:text="*{goalDifference}"></th>
+                <th th:text="*{points}"></th>
+            </tr>
+            <tr th:object="${team11}">
+                <th th:text="*{rank}"></th>
+                <th th:text="*{teamName}"></th>
+                <th th:text="*{matchesPlayed}"></th>
+                <th th:text="*{wins}"></th>
+                <th th:text="*{draws}"></th>
+                <th th:text="*{losses}"></th>
+                <th th:text="*{goalsFor}"></th>
+                <th th:text="*{goalsAgainst}"></th>
+                <th th:text="*{goalDifference}"></th>
+                <th th:text="*{points}"></th>
+            </tr>
+            <tr th:object="${team12}">
+                <th th:text="*{rank}"></th>
+                <th th:text="*{teamName}"></th>
+                <th th:text="*{matchesPlayed}"></th>
+                <th th:text="*{wins}"></th>
+                <th th:text="*{draws}"></th>
+                <th th:text="*{losses}"></th>
+                <th th:text="*{goalsFor}"></th>
+                <th th:text="*{goalsAgainst}"></th>
+                <th th:text="*{goalDifference}"></th>
+                <th th:text="*{points}"></th>
+            </tr>
+            <tr th:object="${team13}">
+                <th th:text="*{rank}"></th>
+                <th th:text="*{teamName}"></th>
+                <th th:text="*{matchesPlayed}"></th>
+                <th th:text="*{wins}"></th>
+                <th th:text="*{draws}"></th>
+                <th th:text="*{losses}"></th>
+                <th th:text="*{goalsFor}"></th>
+                <th th:text="*{goalsAgainst}"></th>
+                <th th:text="*{goalDifference}"></th>
+                <th th:text="*{points}"></th>
+            </tr>
+            <tr th:object="${team14}">
+                <th th:text="*{rank}"></th>
+                <th th:text="*{teamName}"></th>
+                <th th:text="*{matchesPlayed}"></th>
+                <th th:text="*{wins}"></th>
+                <th th:text="*{draws}"></th>
+                <th th:text="*{losses}"></th>
+                <th th:text="*{goalsFor}"></th>
+                <th th:text="*{goalsAgainst}"></th>
+                <th th:text="*{goalDifference}"></th>
+                <th th:text="*{points}"></th>
+            </tr>
+            <tr th:object="${team15}">
+                <th th:text="*{rank}"></th>
+                <th th:text="*{teamName}"></th>
+                <th th:text="*{matchesPlayed}"></th>
+                <th th:text="*{wins}"></th>
+                <th th:text="*{draws}"></th>
+                <th th:text="*{losses}"></th>
+                <th th:text="*{goalsFor}"></th>
+                <th th:text="*{goalsAgainst}"></th>
+                <th th:text="*{goalDifference}"></th>
+                <th th:text="*{points}"></th>
+            </tr>
+            <tr th:object="${team16}">
+                <th th:text="*{rank}"></th>
+                <th th:text="*{teamName}"></th>
+                <th th:text="*{matchesPlayed}"></th>
+                <th th:text="*{wins}"></th>
+                <th th:text="*{draws}"></th>
+                <th th:text="*{losses}"></th>
+                <th th:text="*{goalsFor}"></th>
+                <th th:text="*{goalsAgainst}"></th>
+                <th th:text="*{goalDifference}"></th>
+                <th th:text="*{points}"></th>
+            </tr>
+            <tr th:object="${team17}">
+                <th th:text="*{rank}"></th>
+                <th th:text="*{teamName}"></th>
+                <th th:text="*{matchesPlayed}"></th>
+                <th th:text="*{wins}"></th>
+                <th th:text="*{draws}"></th>
+                <th th:text="*{losses}"></th>
+                <th th:text="*{goalsFor}"></th>
+                <th th:text="*{goalsAgainst}"></th>
+                <th th:text="*{goalDifference}"></th>
+                <th th:text="*{points}"></th>
+            </tr>
+            <tr th:object="${team18}">
+                <th th:text="*{rank}"></th>
+                <th th:text="*{teamName}"></th>
+                <th th:text="*{matchesPlayed}"></th>
+                <th th:text="*{wins}"></th>
+                <th th:text="*{draws}"></th>
+                <th th:text="*{losses}"></th>
+                <th th:text="*{goalsFor}"></th>
+                <th th:text="*{goalsAgainst}"></th>
+                <th th:text="*{goalDifference}"></th>
+                <th th:text="*{points}"></th>
+            </tr>
+        </table>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENbsQ7AyEECvm3wlSE2JcNmb4iYeJrJkTvQWfpCVuBO1sE"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-Apq/bUIeoIgTmM8lvkNhhPLVNHaESuVH0BZIzGmPg3z2Uj1sIzHoT+j8sVYzEzpC"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZRvjQ5Qyw+kSXNsrMhQC3BrzMEVBjYtCS+rMoD4GqPRLztTwwYl3e0oXdHoqpE"
+        crossorigin="anonymous"></script>
+<script>
+    // JavaScript içeriği
+    document.addEventListener("DOMContentLoaded", function () {
+        var tableRows = document.querySelectorAll("tbody tr");
+        tableRows.forEach(function (row, index) {
+            if (index % 2 === 0) {
+                row.style.backgroundColor = "#f8f9fa"; // Çift sıraların arka plan rengini değiştir
+            }
+        });
+    });
+
+</script>
+</body>
+</html>
